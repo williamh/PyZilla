@@ -2,8 +2,7 @@
 PyZilla
 =======
 
-PyZilla is a simple wrapper on top the ``xmlrpclib`` package which
-provides an object that can be used to make XML-RPC calls. 
+PyZilla is a simple wrapper on top the xmlrpclib package which provides an object that can be used to make XML-RPC calls to a Bugzilla installation.
 
 The module exposes the ``BugZilla`` object which you can instantiate
 with the uri to the ``xmlrpc.cgi`` file on your bugzilla installation.
