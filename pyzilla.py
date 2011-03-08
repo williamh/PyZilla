@@ -35,7 +35,7 @@ class CookieAuthXMLRPCTransport(xmlrpclib.SafeTransport):
 
     """
 
-    def __init__(self, cookiefile = False, user_agent = False):
+    def __init__(self, cookiefile = None, user_agent = None):
         self.cookiefile = cookiefile or "cookies.txt"
         self.user_agent = user_agent or create_user_agent()
         xmlrpclib.SafeTransport.__init__(self)
