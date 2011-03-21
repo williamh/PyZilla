@@ -95,10 +95,10 @@ class CookieAuthXMLRPCTransport(xmlrpclib.SafeTransport):
 class BugZilla(xmlrpclib.Server):
     def __init__(self, url, verbose = False, cookiefile =  None,
             user_agent=None):
-        xmlrpclib.Server.__init__(self, url, CookieAuthXMLRPCTransport(),
-                                  verbose = verbose,
-                                  cookiefile = cookiefile,
-                                  user_agent = user_agent)
+        xmlrpclib.Server.__init__(self, url,
+                CookieAuthXMLRPCTransport(cookiefile = cookiefile,
+                    user_agent = user_agent),
+                                  verbose = verbose)
 
     def login(self, username, password):
         self.User.login (dict(login=username,
