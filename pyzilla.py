@@ -14,12 +14,12 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+import cookielib
+import logging
 import os
 import sys
-import xmlrpclib
 import urllib2
-import logging
-import cookielib
+import xmlrpclib
 
 def create_user_agent():
     ma, mi, rel = sys.version_info[:3]
